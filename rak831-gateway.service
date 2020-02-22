@@ -1,0 +1,12 @@
+[Unit]
+Description=RAK831 Gateway
+
+[Service]
+WorkingDirectory=/opt/rak831-gateway/packet_forwarder/lora_pkt_fwd/
+ExecStart=/opt/rak831-gateway/packet_forwarder/lora_pkt_fwd/start.sh
+SyslogIdentifier=rak831-gateway
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
